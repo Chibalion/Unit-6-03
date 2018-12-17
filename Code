@@ -1,0 +1,28 @@
+// Created by: Justin Richards
+// Created for: ICS3U
+// This program prints out the layout for your mailing address
+import Foundation
+
+struct MailingAddress {
+    var firstName : String
+    var lastName : String
+    var address : String
+    var city : String
+    var province : String
+    var postalCode : String
+}
+
+let firstN = ask("Enter your first name")
+let lastN = ask("Enter your last name")
+let mailingAddress = ask("Enter you full address")
+let aCity = ask("Enter your city")
+let aProvince = ask("Enter your province")
+let aPostalCode = ask("Enter your postal code")
+
+let postalAddress = MailingAddress(firstName: firstN, lastName: lastN, address: mailingAddress, city: aCity, province: aProvince, postalCode: aPostalCode)
+
+show("")
+show("Your printed address:")
+show("\(postalAddress.firstName) \(postalAddress.lastName)")
+show("\(postalAddress.address)")
+show("\(postalAddress.city) \(postalAddress.province) \(postalAddress.postalCode)")
